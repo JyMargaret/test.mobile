@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedPharm - Online Pharmacy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+<header class="bg-primary text-white p-4 shadow-md w-full">
+    <div class="flex justify-between items-center max-w-screen-2xl mx-auto px-0">
+
+        <div class="flex items-center space-x-2">
+            <div class="relative group">
+                <button class="flex items-center space-x-1 text-white hover:text-blue-200">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <!-- Dropdown -->
+                <div class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">Sign In | Register</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">Medicines</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">First aid and Supplies</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">Our Pharmacies</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">Vitamins & Supplements</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">Dermatologicals</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">Family Planning</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">Mom & Baby</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">Personal Care</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">Hot Deals</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">On Sale!</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">Snacks</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">Brands</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 text-sm">Blog</a>
+                </div>
+            </div>
+            <!-- Logo -->
+            <i class="fas fa-prescription-bottle-alt text-2xl"></i>
+            <h1 class="text-xl font-bold"><a href="index.html">MediFinder</a></h1>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="flex w-full max-w-xl mx-10">
+            <input type="text" placeholder="Search medicines..." class="form-input rounded-r-none flex-grow text-sm">
+            <button class="btn btn-primary rounded-l-none px-4">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-1 items-center">
+            <a href="index.html" class="nav-link active text-sm">Home</a>
+            <a href="pharmacies.html" class="nav-link active text-sm">Pharmacy</a>
+            <a href="products.html" class="nav-link text-sm">Medicines</a>
+            <a href="#contact" class="nav-link text-sm">Contact</a>
+            <span id="userNav" class="flex items-center space-x-2 ml-2">
+                <a href="Login/login.html" id="loginLink" class="text-white hover:text-blue-200 text-sm">
+                    <i class="fas fa-user mr-1"></i> Login
+                </a>
+            </span>
+        </nav>
+    </div>
+</header>
+
+<!-- Top Horizontal Navigation -->
+<div class="relative bg-white shadow-md text-blue-700 text-sm font-medium justify-center items-center ">
+    <div class="w-full ">
+      <div class="flex whitespace-nowrap divide-x divide-blue-100">
+
+        <div class="group relative">
+          <button class="px-4 py-3 flex items-center gap-1 hover:bg-blue-100 whitespace-nowrap">
+            Medicines <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <div class="absolute left-0 top-full w-screen bg-white text-black shadow-lg hidden group-hover:flex z-40 py-8 px-12 space-x-12 text-sm border-t">
+            <div>
+              <h3 class="font-bold mb-2">Prescription</h3>
+              <ul class="space-y-1">
+                <li><a href="medicines.html#category-1" class="hover:text-blue-500">Allergy & Antihistamine</a></li>
+                <li><a href="medicines.html#category-2" class="hover:text-blue-500">Analgesic & Pain Relievers</a></li>
+                <li><a href="#" class="hover:text-blue-500">Antibiotics</a></li>
+                <li><a href="#" class="hover:text-blue-500">Antidiabetics</a></li>
+                <li><a href="#" class="hover:text-blue-500">Antifungal</a></li>
+                <li><a href="#" class="hover:text-blue-500">Antivirals</a></li>
+                <li><a href="#" class="hover:text-blue-500">Cardio</a></li>
+                <li><a href="#" class="hover:text-blue-500">Contraceptives</a></li>
+                <li><a href="#" class="hover:text-blue-500">Digestives & Laxatives</a></li>
+                <li><a href="#" class="hover:text-blue-500">Electrolytes & Minerals</a></li>
+                <li><a href="#" class="hover:text-blue-500">Eye & Ear</a></li>
+                <li><a href="#" class="hover:text-blue-500">Gastro</a></li>
+                <li><a href="#" class="hover:text-blue-500">Respiratory</a></li>
+                <li><a href="#" class="hover:text-blue-500">Cough Cold & Flu</a></li>
+                <li><a href="#" class="hover:text-blue-500">Pain Reliever & Fever</a></li>
+                <li><a href="#" class="hover:text-blue-500">Traditional Medicine</a></li>
+                <li><a href="#" class="hover:text-blue-500">Weight Loss Solutions</a></li>         
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">Over-the-counter</h3>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:text-blue-500">Over-the-counter</a></li>
+                <li><a href="#" class="hover:text-blue-500">Anti-Diarrhea</a></li>
+                <li><a href="#" class="hover:text-blue-500">Antiemetics & Anti-vertigo</a></li>
+                <li><a href="#" class="hover:text-blue-500">Antihelmintics</a></li>
+                <li><a href="#" class="hover:text-blue-500">Antihistamines & Antiallergics</a></li>
+                <li><a href="#" class="hover:text-blue-500">Cough Cold & Flu</a></li>
+                <li><a href="#" class="hover:text-blue-500">Digestives, Laxatives & Antiflatulence</a></li>
+                <li><a href="#" class="hover:text-blue-500">Electrolytes & Minerals</a></li>
+                <li><a href="#" class="hover:text-blue-500">Eye & Ear</a></li>
+                <li><a href="#" class="hover:text-blue-500">Gastro</a></li>
+                <li><a href="#" class="hover:text-blue-500">Genitourinary</a></li>
+                <li><a href="#" class="hover:text-blue-500">Lozenge & Mouth</a></li>
+                <li><a href="#" class="hover:text-blue-500">Pain Reliever & Fever</a></li>
+                <li><a href="#" class="hover:text-blue-500">Traditional Medicine</a></li>
+                <li><a href="#" class="hover:text-blue-500">Vascular</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">Compounded</h3>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:text-blue-500">Weight Loss Solutions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Other Menu Buttons -->
+       
+        <button class="px-4 py-3 hover:bg-blue-100 whitespace-nowrap flex items-center gap-1">
+          Vitamins & Supplements <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+        <button class="px-4 py-3 hover:bg-blue-100 whitespace-nowrap flex items-center gap-1">
+          Dermatologicals <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+        <button class="px-4 py-3 hover:bg-blue-100 whitespace-nowrap flex items-center gap-1">
+          First Aid & Supplies <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+        <button class="px-4 py-3 hover:bg-blue-100 whitespace-nowrap flex items-center gap-1">
+          Family Planning <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+        <button class="px-4 py-3 hover:bg-blue-100 whitespace-nowrap flex items-center gap-1">
+          Mom & Baby <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+        <button class="px-4 py-3 hover:bg-blue-100 whitespace-nowrap flex items-center gap-1">
+          Personal Care <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+        <button class="px-4 py-3 hover:bg-blue-100 whitespace-nowrap">Snacks</button>
+  
+        <!-- Hot Deals with badge -->
+        <div class="relative">
+          <button class="px-4 py-3 hover:bg-blue-100 whitespace-nowrap">Hot Deals</button>
+          <span class="absolute -top-1 right-2 inline-flex items-center justify-center w-4 h-4 text-[10px] text-white bg-red-600 rounded-full">%</span>
+        </div>
+  
+        <button class="px-4 py-3 hover:bg-blue-100 whitespace-nowrap">On Sale!</button>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Your Trusted Online Pharmacy</h2>
+            <p class="text-xl mb-8">Find and order your medicines with ease.</p>
+            <div class="max-w-md mx-auto">
+               
+            </div>
+        </div>
+    </section>
+<!-- Categories Section -->
+<section class="py-12">
+    <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-primary">Browse Categories</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a href="products.html" class="card p-6 text-center hover:bg-blue-50 transition-all">
+                <div class="bg-blue-100 p-4 rounded-full inline-block mb-3">
+                    <i class="fas fa-pills text-primary text-2xl"></i>
+                </div>
+                <h4 class="font-medium">Antibiotics</h4>
+            </a>
+            <a href="products.html" class="card p-6 text-center hover:bg-blue-50 transition-all">
+                <div class="bg-blue-100 p-4 rounded-full inline-block mb-3">
+                    <i class="fas fa-heartbeat text-primary text-2xl"></i>
+                </div>
+                <h4 class="font-medium">Eyes and Ears</h4>
+            </a>
+            <a href="products.html" class="card p-6 text-center hover:bg-blue-50 transition-all">
+                <div class="bg-blue-100 p-4 rounded-full inline-block mb-3">
+                    <i class="fas fa-prescription-bottle-alt text-primary text-2xl"></i> 
+                </div>
+                <h4 class="font-medium">Vitamins and Supplements</h4>
+            </a>
+            <a href="products.html" class="card p-6 text-center hover:bg-blue-50 transition-all">
+                <div class="bg-blue-100 p-4 rounded-full inline-block mb-3">
+                    <i class="fas fa-prescription-bottle-alt text-primary text-2xl"></i>
+                </div>
+                <h4 class="font-medium">Over-the-counter</h4>
+            </a>
+            <a href="products.html" class="card p-6 text-center hover:bg-blue-50 transition-all">
+                <div class="bg-blue-100 p-4 rounded-full inline-block mb-3">
+                    <i class="fas fa-virus text-primary text-2xl"></i> 
+                </div>
+                <h4 class="font-medium">Antivirals</h4>
+            </a>
+            <a href="products.html" class="card p-6 text-center hover:bg-blue-50 transition-all">
+                <div class="bg-blue-100 p-4 rounded-full inline-block mb-3">
+                    <i class="fas fa-tablets text-primary text-2xl"></i>
+                </div>
+                <h4 class="font-medium">Analgesic & Pain Relievers</h4>
+            </a>
+            <a href="products.html" class="card p-6 text-center hover:bg-blue-50 transition-all">
+                <div class="bg-blue-100 p-4 rounded-full inline-block mb-3">
+                    <i class="fas fa-heart text-primary text-2xl"></i> 
+                </div>
+                <h4 class="font-medium">Cardio</h4>
+            </a>
+            <a href="products.html" class="card p-6 text-center hover:bg-blue-50 transition-all">
+                <div class="bg-blue-100 p-4 rounded-full inline-block mb-3">
+                    <i class="fas fa- text-primary text-2xl"></i> 
+                </div>
+                <h4 class="font-medium">Dermatologicals</h4>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="py-12">
+    <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold mb-8 text-primary">Now in Demand</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            
+            <!-- Product 1 -->
+            <a href="products.html" class="card p-10 text-center hover:bg-blue-50 transition-all relative group">
+                <div class="inline-block mb-1" style="width: 100%; height: 190px; overflow: hidden;"> 
+                    <img src="img/medicine1.png" alt="medicines" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h4 class="font-medium mt-2 p-10">DANN'S Methyl Salicylate Oil of Wintergreen - 60 ml</h4> 
+                <div class="absolute inset-0 bg-white bg-opacity-95 p-4 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out pointer-events-none flex flex-col justify-center items-center text-center z-10">
+                    <div class="absolute top-2 right-2 text-gray-600 hover:text-blue-500 text-xl pointer-events-auto">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Methyl Salicylate Oil</h4>
+                        <p class="text-sm"><i class="fas fa-tag mr-1"></i>₱120.00</p>
+                        <p class="text-sm">Brand: DANN'S</p>
+                        <p class="text-sm">Dosage: 60 ml</p>
+                    </div>
+                </div>
+                <div class="absolute bottom-2 left-2 text-gray-700 flex flex-col gap-1">
+                    <p class="text-green-600 text-lg">In stock</p>
+                    <p class="text-xl"><i class="fas fa-tag mr-1"></i>₱120.00</p>
+                </div>
+            </a>
+
+            <!-- Product 2 -->
+            <a href="products.html" class="card p-10 text-center hover:bg-blue-50 transition-all relative group">
+                <div class=" inline-block mb-1" style="width: 100%; height: 180px; overflow: hidden;"> 
+                    <img src="img/ibuprofen.png" alt="medicines" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h4 class="font-medium mt-2">Ibuprofen - 200 mg tablets</h4> 
+                <div class="absolute inset-0 bg-white bg-opacity-95 p-4 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out pointer-events-none flex flex-col justify-center items-center text-center z-10">
+                    <div class="absolute top-2 right-2 text-gray-600 hover:text-blue-500 text-xl pointer-events-auto">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Ibuprofen - 200 mg tablets</h4>
+                        <p class="text-sm"><i class="fas fa-tag mr-1"></i>₱98.00</p>
+                        <p class="text-sm">Brand: Generic</p>
+                        <p class="text-sm">Dosage: 200 mg</p>
+                    </div>
+                </div>
+                <div class="absolute bottom-2 left-2 text-gray-700 flex flex-col gap-1">
+                    <p class="text-green-600 text-lg">In stock</p>
+                    <p class="text-xl"><i class="fas fa-tag mr-1"></i>₱98.00</p>
+                </div>
+            </a>
+
+            <!-- Product 3 -->
+            <a href="products.html" class="card p-10 text-center hover:bg-blue-50 transition-all relative group">
+                <div class="inline-block mb-1" style="width: 100%; height: 200px; overflow: hidden;"> 
+                    <img src="img/acetaminophen.png" alt="medicines" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h4 class="font-medium mt-2">Acetaminophen - 500 mg tablets</h4> 
+                <div class="absolute inset-0 bg-white bg-opacity-95 p-4 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out pointer-events-none flex flex-col justify-center items-center text-center z-10">
+                    <div class="absolute top-2 right-2 text-gray-600 hover:text-blue-500 text-xl pointer-events-auto">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Acetaminophen - 500 mg</h4>
+                        <p class="text-sm"><i class="fas fa-tag mr-1"></i>₱85.00</p>
+                        <p class="text-sm">Brand: Generic</p>
+                        <p class="text-sm">Dosage: 500 mg</p>
+                    </div>
+                </div>
+                <div class="absolute bottom-2 left-2 text-gray-700 flex flex-col gap-1">
+                    <p class="text-green-600 text-lg">In stock</p>
+                    <p class="text-xl"><i class="fas fa-tag mr-1"></i>₱85.00</p>
+                </div>
+            </a>
+
+            <!-- Product 4 -->
+            <a href="products.html" class="card p-10 text-center hover:bg-blue-50 transition-all relative group">
+                <div class="inline-block mb-1" style="width: 100%; height: 180px; overflow: hidden;"> 
+                    <img src="img/aspirin.png" alt="medicines" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h4 class="font-medium mt-2">Aspirin - 81 mg</h4> 
+                <div class="absolute inset-0 bg-white bg-opacity-95 p-4 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out pointer-events-none flex flex-col justify-center items-center text-center z-10">
+                    <div class="absolute top-2 right-2 text-gray-600 hover:text-blue-500 text-xl pointer-events-auto">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Aspirin - 81 mg</h4>
+                        <p class="text-sm"><i class="fas fa-tag mr-1"></i>₱75.00</p>
+                        <p class="text-sm">Brand: Bayer</p>
+                        <p class="text-sm">Dosage: 81 mg</p>
+                    </div>
+                </div>
+                <div class="absolute bottom-2 left-2 text-gray-700 flex flex-col gap-1">
+                    <p class="text-green-600 text-lg">In stock</p>
+                    <p class="text-xl"><i class="fas fa-tag mr-1"></i>₱75.00</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="flex justify-center mt-4">
+            <button class="btn btn-outline btn-sm" style="width: 150px;">See more</button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Featured Pharmacies -->
+    <div id="pharmacy">
+        <section class="py-12 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h3 class="text-2xl font-bold mb-8 text-primary">Featured Pharmacies</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clinic-medical text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Mercury Drug - Sta. Maria</h4>
+                                <p class="text-sm text-gray-600">Open until 10:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt text-primary-light mr-2"></i>
+                            Sta. Maria Road
+                        </p>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-500">
+                                <i class="fas fa-phone-alt mr-1"></i> 0908 813 2672
+                            </span>
+                            <a href="pharmacies.html" class="btn btn-outline btn-sm">View Pharmacy</a>
+                        </div>
+                    </div>
+                    <div class="card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clinic-medical text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Mercury Drug - Sta. Maria</h4>
+                                <p class="text-sm text-gray-600">Open until 10:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt text-primary-light mr-2"></i>
+                            Sta. Maria Road
+                        </p>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-500">
+                                <i class="fas fa-phone-alt mr-1"></i> 0908 813 2672
+                            </span>
+                            <a href="pharmacies.html" class="btn btn-outline btn-sm">View Pharmacy</a>
+
+                        </div>
+                    </div>
+                    <div class="card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clinic-medical text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Mercury Drug - Sta. Maria</h4>
+                                <p class="text-sm text-gray-600">Open until 10:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt text-primary-light mr-2"></i>
+                            Sta. Maria Road
+                        </p>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-500">
+                                <i class="fas fa-phone-alt mr-1"></i> 0908 813 2672
+                            </span>
+                            <a href="pharmacies.html" class="btn btn-outline btn-sm">View Pharmacy</a>
+
+                        </div>
+                    </div>
+                    <div class="card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clinic-medical text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Mercury Drug - Sta. Maria</h4>
+                                <p class="text-sm text-gray-600">Open until 10:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt text-primary-light mr-2"></i>
+                            Sta. Maria Road
+                        </p>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-500">
+                                <i class="fas fa-phone-alt mr-1"></i> 0908 813 2672
+                            </span>
+                            <a href="pharmacies.html" class="btn btn-outline btn-sm">View Pharmacy</a>
+
+                        </div>
+                    </div>
+                    <div class="card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clinic-medical text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Mercury Drug - Sta. Maria</h4>
+                                <p class="text-sm text-gray-600">Open until 10:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt text-primary-light mr-2"></i>
+                            Sta. Maria Road
+                        </p>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-500">
+                                <i class="fas fa-phone-alt mr-1"></i> 0908 813 2672
+                            </span>
+                            <a href="pharmacies.html" class="btn btn-outline btn-sm">View Pharmacy</a>
+
+                        </div>
+                    </div>
+                    <div class="card p-6">
+                        <div class="flex items-center mb-4">
+                           
+                            <div>
+                                <h1 class=" text-xl max-w-md">See more</h1>
+                            </div>
+                        </div>
+    
+                        <div class="flex justify-center">
+                            <button class="btn btn-outline btn-primary">
+                                <i class="fas fa-arrow-right mr-1"></i>
+                            </button>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                    
+    
+                    <!-- More pharmacy cards would go here -->
+                </div>
+            </div>
+        </section>
+     
+    <!-- Footer -->
+     <div id="contact">
+    <footer class="bg-primary-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">MediFinder</h4>
+                    <p class="text-blue-200">Your trusted online pharmacy for all your medical needs.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-blue-200 hover:text-white">Home</a></li>
+                        <li><a href="products.html" class="text-blue-200 hover:text-white">Medicines</a></li>
+                        <li><a href="#pharmacy" class="text-blue-200 hover:text-white">Pharmacies</a></li>
+                        <li><a href="#contact" class="text-blue-200 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-blue-200"></i>
+                            <span class="text-blue-200">(062) 992 2222</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-blue-200"></i>
+                            <span class="text-blue-200">medifinder.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-200 hover:text-white text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-700 mt-8 pt-6 text-center text-blue-200">
+                <p>&copy; 2025 MediFinder. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>
